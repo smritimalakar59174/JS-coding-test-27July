@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
+    <head>
     <title>Registration</title>
-    <heading></heading>
-    <link href="scripts/bootstrap.css" rel="stylesheet">
-    <link href="scripts/register.css" rel="stylesheet">
+	<link rel="stylesheet" href="scripts/bootstrap.css">
+        <link rel="stylesheet" href="scripts/register.css">
+    </head>
     <body>
-        <div class="row justify-content-center">
-         <div class="col-lg-6 col-md-8 col-sm-10">
-         <div class="text-center text-secondary">
-         <h2>Register with Us</h2>
-        </div>
-        <form class="text-muted" onSubmit="return formValidation();"></form> >
-        <div class="form-group">
-         <label for="name">Username</label>
-         <input type="text" class="form-control" id="name"
-         placeholder ="Enter User Name"
-        required
-        minlength="4" maxlength="30"
-         >
-         </div>
-         <div class="form-group">
-         <label for="email">Email</label>
-         <input type="text" class="form-control" id="email"
-         placeholder ="abc00@xyz"
-         >
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="text" class="form-control" id="password"
-            required
-            minlength="6"
-            >
-        </div>                 
-             <div class="form-group">
-             <label for="password">Confirm Password</label>
-            <input type="text" class="form-control" id="Confirm-password"
-            required
-            >
-        </div>
-        <button class="btn btn-outline-primary btn-block" type="submit">Submit</button>
-         </form>
-        </div>
-        </div>
+
+    <div class="container">
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<form method="POST" action="#" role="form">
+						<div class="form-group">
+							<h2>Register With Us</h2>
+						</div>
+						<div class="form-group">
+							<label class="control-label text-muted" for="signupName">Username</label>
+							<input id="signupName" type="text"
+                             class="form-control" placeholder="Enter username" required>
+                            <span class="error"><p id="name_error"></p></span>
+						</div>
+						<div class="form-group">
+							<label class="control-label text-muted" for="signupEmail">Email</label>
+							<input id="signupEmail" type="email" maxlength="50" class="form-control" placeholder="Enter email" required>
+                            <span class="error"><p id="email_error"></p></span>
+
+                        </div>
+						<div class="form-group">
+							<label class="control-label text-muted" for="signupPassword">Password</label>
+							<input id="signupPassword" type="password"  class="form-control" placeholder="Enter password" length="40" required>
+                            <span class="error"><p id="pass_error"></p></span>
+						</div>
+						<div class="form-group">
+							<label class="control-label text-muted" for="signupPasswordagain">Confirm Password</label>
+							<input id="signupPasswordagain" type="password" class="form-control" placeholder="Enter password again" required>
+                            <span class="error"><p id="pass_again_error"></p></span>
+						</div>
+						<div class="form-group">
+							<button id="btnSubmit" type="submit" class="btn btn-primary btn-block" onclick="validateForm()">Submit</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+    
     <script src="scripts/register.js"></script>
     </body>
 </html>
